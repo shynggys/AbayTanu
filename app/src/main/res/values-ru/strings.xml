@@ -1,2 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Абай Тану</string>
+    <string name="action_settings">Настроики</string>
+    <string name="edit_message">Введите сообщение</string>
+    <string name="button_send">Отправить</string>
+    <string name="title">Абай Тану</string>
+    <string name="title_activity_display_message">Показать сообщение</string>
+    <string name="action_search">Поиск</string>
+</resources>
