@@ -1,6 +1,7 @@
 package com.example.ishynggys.abaytanu;
 
 import android.content.Intent;
+import android.os.CountDownTimer;
 import android.provider.Settings;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -17,7 +19,20 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
+        setContentView(R.layout.splash);
+
+        new CountDownTimer(3000,1000){
+            @Override
+            public void onTick(long millisUntilFinished){}
+
+            @Override
+            public void onFinish(){
+                //set the new Content of your activity
+                setContentView(R.layout.activity_main);
+                getSupportActionBar().show();
+            }
+        }.start();
     }
 
     @Override
@@ -55,10 +70,12 @@ public class MainActivity extends ActionBarActivity {
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
+
     public void openSearch()
     {
         //Do something here.
     }
+
     public void openSettings()
     {
         //Do something here.
