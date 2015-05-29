@@ -11,28 +11,34 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
     public final static String EXTRA_MESSAGE = "com.example.ishynggys.abaytanu.MESSAGE";
+    private static int count = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
-        setContentView(R.layout.splash);
+        if (count == 1) {
+            count++;
+            getSupportActionBar().hide();
+            setContentView(R.layout.splash);
+            new CountDownTimer(3000, 1000) {
+                @Override
+                public void onTick(long millisUntilFinished) {
+                }
 
-        new CountDownTimer(3000,1000){
-            @Override
-            public void onTick(long millisUntilFinished){}
-
-            @Override
-            public void onFinish(){
-                //set the new Content of your activity
-                setContentView(R.layout.activity_main);
-                getSupportActionBar().show();
-            }
-        }.start();
+                @Override
+                public void onFinish() {
+                    //set the new Content of your activity
+                    setContentView(R.layout.activity_main);
+                    getSupportActionBar().show();
+                }
+            }.start();
+        } else
+            setContentView(R.layout.activity_main);
     }
 
     @Override

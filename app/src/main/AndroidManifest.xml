@@ -12,6 +12,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,6 +24,7 @@
             android:label="@string/title_activity_display_message"
             android:parentActivityName="com.example.ishynggys.abaytanu.MainActivity">
         </activity>
+
     </application>
 
 </manifest>
