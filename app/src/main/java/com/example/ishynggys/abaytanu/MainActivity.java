@@ -21,6 +21,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle(R.string.title);
         if (count == 1) {
             count = 2;
             getSupportActionBar().hide();

@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/edit_message"
-                android:text="@string/edit_message"/>
+                android:hint="@string/edit_message"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -44,6 +44,12 @@
                 android:id="@+id/button" />
 
         </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.2dp"
+            android:id="@+id/separator"
+            android:visibility="visible"
+            android:background="@android:color/darker_gray"/>
 
         <Button
             android:layout_width="wrap_content"

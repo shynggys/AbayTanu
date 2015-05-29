@@ -16,6 +16,7 @@ public class Biography extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle(R.string.title);
         setContentView(R.layout.activity_biography);
         TextView bioTextView = (TextView) findViewById(R.id.bioTextView);
         bioTextView.setText(R.string.biography);
