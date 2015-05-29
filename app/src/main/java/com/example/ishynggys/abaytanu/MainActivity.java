@@ -77,6 +77,11 @@ public class MainActivity extends ActionBarActivity {
         startActivity(intent);
     }
 
+    public void biography(View view) {
+        Intent intent = new Intent(this, Biography.class);
+        startActivity(intent);
+    }
+
     public void openSearch()
     {
         //Do something here.
