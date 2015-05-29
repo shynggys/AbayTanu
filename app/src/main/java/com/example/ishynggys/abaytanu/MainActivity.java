@@ -22,7 +22,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (count == 1) {
-            count++;
+            count = 2;
             getSupportActionBar().hide();
             setContentView(R.layout.splash);
             new CountDownTimer(3000, 1000) {
