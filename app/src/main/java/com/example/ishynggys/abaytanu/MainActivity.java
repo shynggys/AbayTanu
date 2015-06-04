@@ -16,14 +16,11 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
     public final static String EXTRA_MESSAGE = "com.example.ishynggys.abaytanu.MESSAGE";
-    private static int count = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().setTitle(R.string.title);
-        if (count == 1) {
-            count = 2;
             getSupportActionBar().hide();
             setContentView(R.layout.splash);
             new CountDownTimer(3000, 1000) {
@@ -38,8 +35,6 @@ public class MainActivity extends ActionBarActivity {
                     getSupportActionBar().show();
                 }
             }.start();
-        } else
-            setContentView(R.layout.activity_main);
     }
 
     @Override
